@@ -1,0 +1,366 @@
+:root {
+  --portal-header-height: 64px;
+  --portal-whatsapp-green: #25d366;
+}
+
+html {
+  scroll-padding-top: calc(var(--portal-header-height) + 16px);
+}
+
+body {
+  padding-top: var(--portal-header-height) !important;
+}
+
+#global-portal-header {
+  min-height: 64px;
+  height: auto !important;
+  gap: 16px;
+}
+
+#global-portal-header > a {
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+
+#global-portal-header > div {
+  justify-content: flex-end;
+  min-width: 0;
+}
+
+.header,
+.header_area,
+.header-section,
+.navigation,
+.main_header,
+.hamburger_bar,
+.ftco_navbar,
+#top-header {
+  top: var(--portal-header-height) !important;
+}
+
+.menu {
+  top: var(--portal-header-height) !important;
+  height: calc(100vh - var(--portal-header-height)) !important;
+}
+
+
+
+
+
+
+
+.portal-aix-toast {
+  position: fixed;
+  z-index: 1000001;
+  right: 24px;
+  bottom: 98px;
+  max-width: min(360px, calc(100vw - 32px));
+  padding: 12px 16px;
+  border-radius: 12px;
+  background: #14213d;
+  color: #fff;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.24);
+  font: 600 14px/1.4 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 180ms ease, transform 180ms ease;
+  pointer-events: none;
+}
+
+.portal-aix-toast[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 860px) {
+  #global-portal-header {
+    justify-content: center !important;
+    flex-wrap: wrap;
+    gap: 4px;
+    padding: 8px 12px !important;
+  }
+
+  #global-portal-header > a {
+    width: 100%;
+    justify-content: center;
+  }
+
+  #global-portal-header > div {
+    width: 100%;
+    justify-content: center !important;
+    gap: 0 !important;
+    overflow-x: auto !important;
+    scrollbar-width: none;
+  }
+
+  #global-portal-header > div::-webkit-scrollbar {
+    display: none;
+  }
+
+  #global-portal-header > div a {
+    padding: 6px 9px !important;
+    font-size: 10px !important;
+  }
+
+  
+
+  .portal-aix-toast {
+    right: 16px;
+    bottom: 84px;
+  }
+}
+
+
+.portal-whatsapp, #whatsapp-official-btn {
+  position: fixed !important;
+  right: 24px !important;
+  bottom: 24px !important;
+  z-index: 999998 !important;
+  width: 60px !important;
+  height: 60px !important;
+  min-width: 60px !important;
+  min-height: 60px !important;
+  max-width: 60px !important;
+  max-height: 60px !important;
+  border-radius: 50% !important;
+  background-color: #25D366 !important;
+  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4), 0 2px 6px rgba(0, 0, 0, 0.2) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+  box-sizing: border-box !important;
+  transform: none !important;
+  transition: transform 0.25s ease, box-shadow 0.25s ease !important;
+  text-decoration: none !important;
+  overflow: hidden !important;
+}
+
+.portal-whatsapp:hover, #whatsapp-official-btn:hover {
+  transform: scale(1.08) !important;
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6) !important;
+}
+
+.portal-whatsapp svg, #whatsapp-official-btn svg {
+  width: 32px !important;
+  height: 32px !important;
+  min-width: 32px !important;
+  min-height: 32px !important;
+  max-width: 32px !important;
+  max-height: 32px !important;
+  flex: 0 0 32px !important;
+  display: block !important;
+  margin: auto !important;
+  padding: 0 !important;
+  border: none !important;
+  transform: none !important;
+  box-sizing: content-box !important;
+  fill: #ffffff !important;
+  stroke: none !important;
+  vertical-align: middle !important;
+}
+
+
+/* Tecnología Mobile Responsiveness Enhancement */
+@media (max-width: 767px) {
+  #navigation {
+    background: #1E1F29 !important;
+    padding: 6px 0 !important;
+    border-bottom: 3px solid #D10024 !important;
+  }
+  #responsive-nav {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    white-space: nowrap !important;
+    padding: 4px 12px !important;
+    scrollbar-width: none;
+  }
+  #responsive-nav::-webkit-scrollbar {
+    display: none;
+  }
+  .main-nav {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    gap: 6px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .main-nav li {
+    display: inline-block !important;
+    float: none !important;
+  }
+  .main-nav li a {
+    padding: 8px 14px !important;
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    white-space: nowrap !important;
+    color: #FFFFFF !important;
+    border-radius: 4px !important;
+  }
+  .main-nav li.active a {
+    color: #D10024 !important;
+    background: rgba(209, 0, 36, 0.1) !important;
+    border-bottom: 2px solid #D10024 !important;
+  }
+  .product-img-container {
+    min-height: 170px !important;
+    padding: 12px !important;
+  }
+  .product-img-container img {
+    max-height: 140px !important;
+    object-fit: contain !important;
+  }
+  .product-body {
+    padding-left: 0 !important;
+    padding-top: 12px !important;
+    text-align: center !important;
+  }
+  .product-name {
+    font-size: 15px !important;
+  }
+  .product-price {
+    font-size: 18px !important;
+  }
+  .primary-btn {
+    width: 100% !important;
+    text-align: center !important;
+    padding: 10px 16px !important;
+    margin-top: 8px !important;
+    display: block !important;
+  }
+  .header-logo {
+    text-align: center !important;
+    margin-bottom: 10px !important;
+  }
+  .header-search {
+    margin-bottom: 10px !important;
+  }
+}
+
+
+/* Technology Mobile Dropdown Navigation Styling */
+@media (max-width: 991px) {
+  #navigation {
+    background: #1E1F29 !important;
+    padding: 0 !important;
+    border-bottom: 3px solid #D10024 !important;
+    position: relative !important;
+    z-index: 99999 !important;
+  }
+  #responsive-nav {
+    display: none;
+    background: #1E1F29 !important;
+    padding: 12px 16px !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+  }
+  #responsive-nav .main-nav {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 6px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+  }
+  #responsive-nav .main-nav li {
+    display: block !important;
+    width: 100% !important;
+    margin: 0 !important;
+  }
+  #responsive-nav .main-nav li a {
+    display: block !important;
+    padding: 10px 16px !important;
+    color: #FFFFFF !important;
+    font-size: 15px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 6px !important;
+    background: transparent !important;
+  }
+  #responsive-nav .main-nav li a:hover,
+  #responsive-nav .main-nav li.active a {
+    color: #D10024 !important;
+    background: rgba(209, 0, 36, 0.15) !important;
+  }
+}
+
+
+/* BULLETPROOF TECNOLOGIA MOBILE MENU CSS */
+@media (max-width: 991px) {
+  #navigation {
+    background: #1E1F29 !important;
+    padding: 0 !important;
+    border-bottom: 3px solid #D10024 !important;
+    position: relative !important;
+    z-index: 99999 !important;
+    display: block !important;
+  }
+  #navigation .container {
+    padding: 0 !important;
+    width: 100% !important;
+  }
+  #responsive-nav {
+    display: none !important;
+    background: #1E1F29 !important;
+    padding: 12px 16px !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+    width: 100% !important;
+  }
+  #responsive-nav.active,
+  #responsive-nav[style*="display: block"] {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+  #responsive-nav .main-nav {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 6px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+  }
+  #responsive-nav .main-nav li {
+    display: block !important;
+    width: 100% !important;
+    margin: 0 !important;
+    float: none !important;
+  }
+  #responsive-nav .main-nav li a {
+    display: block !important;
+    padding: 12px 18px !important;
+    color: #FFFFFF !important;
+    font-size: 15px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 6px !important;
+    background: transparent !important;
+  }
+  #responsive-nav .main-nav li a:hover,
+  #responsive-nav .main-nav li.active a {
+    color: #D10024 !important;
+    background: rgba(209, 0, 36, 0.15) !important;
+  }
+}
+
+
+/* STABLE SINGLE TOGGLE TECNOLOGIA MENU CSS */
+@media (max-width: 991px) {
+  #responsive-nav {
+    display: none !important;
+    background: #1E1F29 !important;
+    padding: 12px 16px !important;
+    border-top: 2px solid #D10024 !important;
+    width: 100% !important;
+  }
+  #responsive-nav.menu-open,
+  #responsive-nav.active {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+}

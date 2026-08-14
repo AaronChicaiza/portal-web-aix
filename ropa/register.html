@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="alternate icon" href="/favicon.ico" />
+    <meta charset="UTF-8">
+    <meta name="description" content="Vestimenta Ecuador Template">
+    <meta name="keywords" content="Vestimenta Ecuador, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vestimenta Ecuador | Template</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/themify-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+
+    <!-- Correcciones globales de Portal AIX -->
+    <link rel="stylesheet" href="../public/portal-aix.css">
+    <script defer src="../public/portal-aix.js"></script>
+  </head>
+
+<body>
+
+<!-- Global Header Portal AIX -->
+<div id="global-portal-header" style="position: fixed; top: 0; left: 0; width: 100%; height: 64px; background: rgba(15, 15, 15, 0.9); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255, 255, 255, 0.08); z-index: 999999; display: flex; align-items: center; justify-content: space-between; padding: 0 24px; box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; transition: all 0.3s ease;">
+  <a href="/" style="color: #ffffff; text-decoration: none; font-weight: 800; font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; display: flex; align-items: center; gap: 8px;">
+    <span style="background: linear-gradient(135deg, #f2ca50, #008080); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">PORTAL AIX</span>
+  </a>
+  <div style="display: flex; gap: 8px; align-items: center; flex-wrap: nowrap; overflow-x: auto;">
+    <a href="/restaurante/index.html" id="nav-restaurante" style="color: #a0a0a0; text-decoration: none; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; padding: 8px 16px; transition: all 0.2s ease;">Restaurante</a>
+    <a href="/belleza/index.html" id="nav-belleza" style="color: #a0a0a0; text-decoration: none; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; padding: 8px 16px; transition: all 0.2s ease;">Belleza</a>
+    <a href="/ropa/index.html" id="nav-ropa" style="color: #a0a0a0; text-decoration: none; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; padding: 8px 16px; transition: all 0.2s ease;">Ropa</a>
+    <a href="/tecnologia/index.html" id="nav-tecnologia" style="color: #a0a0a0; text-decoration: none; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; padding: 8px 16px; transition: all 0.2s ease;">Tecnología</a>
+    <a href="/medico/index.html" id="nav-medico" style="color: #a0a0a0; text-decoration: none; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; padding: 8px 16px; transition: all 0.2s ease;">Médico</a>
+  </div>
+</div>
+<script>
+  (function() {
+    const path = window.location.pathname;
+    let activeId = '';
+    if (path.includes('/restaurante')) activeId = 'nav-restaurante';
+    else if (path.includes('/belleza')) activeId = 'nav-belleza';
+    else if (path.includes('/ropa')) activeId = 'nav-ropa';
+    else if (path.includes('/tecnologia')) activeId = 'nav-tecnologia';
+    else if (path.includes('/medico')) activeId = 'nav-medico';
+    if (activeId) {
+      const el = document.getElementById(activeId);
+      if (el) {
+        el.style.color = '#ffffff';
+        el.style.borderBottom = '2px solid #ffffff';
+        el.style.paddingBottom = '6px';
+      }
+    }
+  })();
+</script>
+<style>
+  body { padding-top: 64px !important; }
+  .header, .header_area, .header-section, .navigation, .main_header, .hamburger_bar, .ftco_navbar, #top-header { top: 64px !important; }
+  .menu { top: 64px !important; height: calc(100vh - 64px) !important; }
+</style>
+
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header Section Begin -->
+    <header class="header-section">
+        <div class="header-top">
+            <div class="container">
+                <div class="ht-left">
+                    <div class="mail-service">
+                        <i class=" fa fa-envelope"></i>
+                        soporte@vestimentaec.com
+                    </div>
+                    <div class="phone-service">
+                        <i class=" fa fa-phone"></i>
+                        +593 992514730
+                    </div>
+                </div>
+                <div class="ht-right">
+                    <a href="#" class="login-panel"><i class="fa fa-user"></i>Iniciar Sesión</a>
+                    <div class="lan-selector" style="display: flex; align-items: center; gap: 6px; color: #ffffff; font-size: 13px; font-weight: 500; font-family: sans-serif;"><span style="font-size: 16px;">🇪🇨</span> Español (EC)</div>
+                    <div class="top-social">
+                        <a href="#"><i class="ti-facebook"></i></a>
+                        <a href="#"><i class="ti-twitter-alt"></i></a>
+                        <a href="#"><i class="ti-linkedin"></i></a>
+                        <a href="#"><i class="ti-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="inner-header">
+                <div class="row">
+                    <div class="col-lg-2 col-md-2">
+                        <div class="logo">
+                            <a href="./index.html">
+                                <img src="img/logo.png" alt="">
+                            </a>
+                        </div>    
+                    </div>
+                    <div class="col-lg-7 col-md-7">
+                        <div class="advanced-search">
+                            <button type="button" class="category-btn">Todas las Categorías</button>
+                            <form action="#" class="input-group">
+                                <input type="text" placeholder="¿Qué necesitas?">
+                                <button type="button"><i class="ti-search"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 text-right col-md-3">
+                        <ul class="nav-right">
+                            <li class="heart-icon"><a href="#">
+                                <i class="icon_heart_alt"></i>
+                                <span>1</span>
+                            </a>
+                            </li>
+                            <li class="cart-icon"><a href="#">
+                                <i class="icon_bag_alt"></i>
+                                <span>3</span>
+                            </a>
+                            <div class="cart-hover">
+                                <div class="select-items">
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td class="si-pic"><img src="img/select-product-1.jpg" alt=""></td>
+                                                <td class="si-text">
+                                                    <div class="product-selected">
+                                                        <p>$60.00 x 1</p>
+                                                        <h6>Kabino Bedside Table</h6>
+                                                    </div>
+                                                </td>
+                                                <td class="si-close">
+                                                    <i class="ti-close"></i>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="si-pic"><img src="img/select-product-2.jpg" alt=""></td>
+                                                <td class="si-text">
+                                                    <div class="product-selected">
+                                                        <p>$60.00 x 1</p>
+                                                        <h6>Kabino Bedside Table</h6>
+                                                    </div>
+                                                </td>
+                                                <td class="si-close">
+                                                    <i class="ti-close"></i>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="select-total">
+                                    <span>total:</span>
+                                    <h5>$120.00</h5>
+                                </div>
+                                <div class="select-button">
+                                    <a href="#" class="primary-btn view-card">VIEW CARD</a>
+                                    <a href="#" class="primary-btn checkout-btn">Pagar / Facturación</a>
+                                </div>
+                            </div>
+                        </li>
+                            <li class="cart-price">$150.00</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nav-item">
+            <div class="container">
+                <div class="nav-depart">
+                    <div class="depart-btn">
+                        <i class="ti-menu"></i>
+                        <span>TODOS LOS DEPARTAMENTOS</span>
+                        <ul class="depart-hover">
+                            <li class="active"><a href="#">Mujeres Ropa / Vestimenta</a></li>
+                            <li><a href="#">Hombres Ropa / Vestimenta</a></li>
+                            <li><a href="#">Underwear</a></li>
+                            <li><a href="#">Niños Ropa / Vestimenta</a></li>
+                            <li><a href="#">Brand Vestimenta Ecuadoron</a></li>
+                            <li><a href="#">Accesorios/Zapatos / Calzado</a></li>
+                            <li><a href="#">Luxury Brands</a></li>
+                            <li><a href="#">Brand Outdoor Apparel</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <nav class="nav-menu mobile-menu">
+                    <ul>
+                        <li><a href="./index.html">Inicio</a></li>
+                        <li><a href="./shop.html">Tienda</a></li>
+                        <li><a href="shop.html">Colecciones</a>
+                            <ul class="dropdown">
+                                <li><a href="#">Hombres</a></li>
+                                <li><a href="#">Mujeres</a></li>
+                                <li><a href="shop.html">Niños</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="./blog.html">Blog</a></li>
+                        <li><a href="./contact.html">Contactoo</a></li>
+                        <li><a href="#">PÁGINAS</a>
+                            <ul class="dropdown">
+                                <li><a href="./blog-details.html">Blog Details</a></li>
+                                <li><a href="./shopping-cart.html">Carrito de Compras</a></li>
+                                <li><a href="./check-out.html">Facturación</a></li>
+                                <li><a href="./faq.html">Faq</a></li>
+                                <li><a href="./register.html">Registrarse</a></li>
+                                <li><a href="./login.html">Iniciar Sesión</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <div id="mobile-menu-wrap"></div>
+            </div>
+        </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Breadcrumb Section Begin -->
+    <div class="breacrumb-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breadcrumb-text">
+                        <a href="#"><i class="fa fa-inicio"></i> Inicio</a>
+                        <span>Registrarse</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Breadcrumb Form Section Begin -->
+
+    <!-- Registrarse Section Begin -->
+    <div class="register-login-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3">
+                    <div class="register-form">
+                        <h2>Registrarse</h2>
+                        <form action="#">
+                            <div class="group-input">
+                                <label for="username">Username or email address *</label>
+                                <input type="text" id="username">
+                            </div>
+                            <div class="group-input">
+                                <label for="pass">Contraseña *</label>
+                                <input type="text" id="pass">
+                            </div>
+                            <div class="group-input">
+                                <label for="con-pass">Confirm Contraseña *</label>
+                                <input type="text" id="con-pass">
+                            </div>
+                            <button type="submit" class="site-btn register-btn">REGISTER</button>
+                        </form>
+                        <div class="switch-login">
+                            <a href="./login.html" class="or-login">Or Iniciar Sesión</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Registrarse Form Section End -->
+    
+    <!-- Partner Logo Section Begin -->
+    <div class="partner-logo">
+        <div class="container">
+            <div class="logo-carousel owl-carousel">
+                <div class="logo-item">
+                    <div class="tablecell-inner">
+                        <img src="img/logo-carousel/logo-1.png" alt="">
+                    </div>
+                </div>
+                <div class="logo-item">
+                    <div class="tablecell-inner">
+                        <img src="img/logo-carousel/logo-2.png" alt="">
+                    </div>
+                </div>
+                <div class="logo-item">
+                    <div class="tablecell-inner">
+                        <img src="img/logo-carousel/logo-3.png" alt="">
+                    </div>
+                </div>
+                <div class="logo-item">
+                    <div class="tablecell-inner">
+                        <img src="img/logo-carousel/logo-4.png" alt="">
+                    </div>
+                </div>
+                <div class="logo-item">
+                    <div class="tablecell-inner">
+                        <img src="img/logo-carousel/logo-5.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Partner Logo Section End -->
+
+    <!-- Footer Section Begin -->
+    <footer style="background: #111c2c; color: #ffffff; padding: 28px 20px; text-align: center; font-size: 14px; font-weight: 500;">Copyright &copy; <span style="color: #ffffff !important; font-weight: 600; display: inline-block;">Elaborado por AIX Soft &bull; Teléfono: +593 992514730</span></footer>
+    <!-- Footer Section End -->
+
+    <!-- Js Plugins -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.countdown.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/jquery.zoom.min.js"></script>
+    <script src="js/jquery.dd.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Official Unwarpable HD Vector WhatsApp Floating Button -->
+<a href="https://wa.me/593992514730" target="_blank" rel="noopener noreferrer" id="whatsapp-official-btn" class="portal-whatsapp" style="position: fixed !important; bottom: 24px !important; right: 24px !important; width: 60px !important; height: 60px !important; min-width: 60px !important; min-height: 60px !important; max-width: 60px !important; max-height: 60px !important; background-color: #25D366 !important; color: #ffffff !important; border-radius: 50% !important; display: flex !important; align-items: center !important; justify-content: center !important; box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4), 0 2px 6px rgba(0, 0, 0, 0.2) !important; z-index: 999998 !important; transition: transform 0.25s ease, box-shadow 0.25s ease !important; text-decoration: none !important; padding: 0 !important; border: none !important; margin: 0 !important; box-sizing: border-box !important; transform: none !important; overflow: hidden !important;">
+  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 175.216 175.552" fill="#ffffff" style="width: 32px !important; height: 32px !important; min-width: 32px !important; min-height: 32px !important; max-width: 32px !important; max-height: 32px !important; flex: 0 0 32px !important; display: block !important; margin: auto !important; transform: none !important; stroke: none !important; outline: none !important;">
+  <path d="M 90.75 0 C 40.713 0 0.1 40.613 0.1 90.65 C 0.1 110.575 6.55 129.013 17.513 144.013 L 0 175.552 L 32.788 158.425 C 47.163 169.113 65.075 175.552 84.538 175.552 C 134.575 175.552 175.216 134.938 175.216 84.9 C 175.216 34.863 134.575 0 90.75 0 Z M 84.538 160.85 C 67.875 160.85 52.488 155.338 40.088 146.063 L 34.95 142.238 L 14.525 152.925 L 25.438 133.325 L 21.275 127.975 C 11.238 115.113 5.3 98.925 5.3 84.9 C 5.3 43.688 41.213 7.775 84.538 7.775 C 127.863 7.775 163.775 43.688 163.775 84.9 C 163.775 126.113 127.863 160.85 84.538 160.85 Z" fill="#ffffff"/>
+  <path d="M 128.538 106.638 C 126.313 105.513 115.425 100.15 113.388 99.413 C 111.35 98.675 109.863 98.313 108.375 100.538 C 106.888 102.763 102.625 107.788 101.325 109.275 C 100.025 110.763 98.725 110.95 96.5 109.838 C 94.275 108.725 87.113 106.375 78.625 98.8 C 72 92.9 67.525 85.613 66.225 83.388 C 64.925 81.163 66.088 79.963 67.2 78.85 C 68.2 77.85 69.425 76.25 70.538 74.95 C 71.65 73.65 72.025 72.725 72.763 71.238 C 73.5 69.75 73.125 68.45 72.563 67.338 C 72 66.225 67.538 55.263 65.675 50.788 C 63.863 46.425 62.013 47.013 60.675 46.938 C 59.413 46.863 57.925 46.863 56.438 46.863 C 54.95 46.863 52.538 47.425 50.488 49.65 C 48.438 51.875 42.688 57.263 42.688 68.213 C 42.688 79.163 50.663 89.738 51.775 91.225 C 52.888 92.713 67.5 115.025 89.925 124.688 C 95.263 126.988 99.4 128.35 102.638 129.388 C 107.988 131.088 112.863 130.85 116.713 130.275 C 121.013 129.638 129.938 124.875 131.8 119.675 C 133.663 114.475 133.663 110.013 133.1 109.088 C 132.538 108.163 131.05 107.6 128.538 106.638 Z" fill="#ffffff"/>
+</svg>
+</a>
+</body>
+
+</html>

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="alternate icon" href="/favicon.ico" />
+    <title>Lumina Belleza - Free Bootstrap 4 Template by AIX Soft</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Prata&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+  
+    <!-- Correcciones globales de Portal AIX -->
+    <link rel="stylesheet" href="../public/portal-aix.css">
+    <script defer src="../public/portal-aix.js"></script>
+  </head>
+  <body>
+
+<!-- Global Header Portal AIX -->
+<div id="global-portal-header" style="position: fixed; top: 0; left: 0; width: 100%; height: 64px; background: rgba(15, 15, 15, 0.9); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255, 255, 255, 0.08); z-index: 999999; display: flex; align-items: center; justify-content: space-between; padding: 0 24px; box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; transition: all 0.3s ease;">
+  <a href="/" style="color: #ffffff; text-decoration: none; font-weight: 800; font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; display: flex; align-items: center; gap: 8px;">
+    <span style="background: linear-gradient(135deg, #f2ca50, #008080); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">PORTAL AIX</span>
+  </a>
+  <div style="display: flex; gap: 8px; align-items: center; flex-wrap: nowrap; overflow-x: auto;">
+    <a href="/restaurante/index.html" id="nav-restaurante" style="color: #a0a0a0; text-decoration: none; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; padding: 8px 16px; transition: all 0.2s ease;">Restaurante</a>
+    <a href="/belleza/index.html" id="nav-belleza" style="color: #a0a0a0; text-decoration: none; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; padding: 8px 16px; transition: all 0.2s ease;">Belleza</a>
+    <a href="/ropa/index.html" id="nav-ropa" style="color: #a0a0a0; text-decoration: none; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; padding: 8px 16px; transition: all 0.2s ease;">Ropa</a>
+    <a href="/tecnologia/index.html" id="nav-tecnologia" style="color: #a0a0a0; text-decoration: none; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; padding: 8px 16px; transition: all 0.2s ease;">Tecnología</a>
+    <a href="/medico/index.html" id="nav-medico" style="color: #a0a0a0; text-decoration: none; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; padding: 8px 16px; transition: all 0.2s ease;">Médico</a>
+  </div>
+</div>
+<script>
+  (function() {
+    const path = window.location.pathname;
+    let activeId = '';
+    if (path.includes('/restaurante')) activeId = 'nav-restaurante';
+    else if (path.includes('/belleza')) activeId = 'nav-belleza';
+    else if (path.includes('/ropa')) activeId = 'nav-ropa';
+    else if (path.includes('/tecnologia')) activeId = 'nav-tecnologia';
+    else if (path.includes('/medico')) activeId = 'nav-medico';
+    if (activeId) {
+      const el = document.getElementById(activeId);
+      if (el) {
+        el.style.color = '#ffffff';
+        el.style.borderBottom = '2px solid #ffffff';
+        el.style.paddingBottom = '6px';
+      }
+    }
+  })();
+</script>
+<style>
+  body { padding-top: 64px !important; margin: 0 !important; }
+  .ftco_navbar { position: absolute !important; top: 64px !important; left: 0 !important; right: 0 !important; width: 100% !important; background: transparent !important; z-index: 99998 !important; margin: 0 !important; }
+  .ftco_navbar.ftco-navbar-light-2 { position: absolute !important; top: 64px !important; background: transparent !important; }
+  .ftco_navbar .navbar-nav > .nav-item > .nav-link { color: #000000 !important; }
+  .ftco_navbar .navbar-brand { color: #d9bf77 !important; }
+  .ftco_navbar.scrolled { position: fixed !important; top: 64px !important; background: rgba(15, 15, 15, 0.95) !important; }
+</style>
+
+  	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light ftco-navbar-light-2" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html"><span class="flaticon-lotus"></span>Lumina Belleza</a>
+	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav ml-auto">
+	          <li class="nav-item"><a href="index.html" class="nav-link">Inicio</a></li>
+	          <li class="nav-item"><a href="about.html" class="nav-link">Nosotros</a></li>
+	          <li class="nav-item"><a href="treatments.html" class="nav-link">Tratamientos</a></li>
+	          <li class="nav-item active"><a href="specialists.html" class="nav-link">Terapeutas</a></li>
+	          <li class="nav-item"><a href="pricing.html" class="nav-link">Precios</a></li>
+	          <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+	          <li class="nav-item"><a href="contact.html" class="nav-link">Contacto</a></li>
+	        </ul>
+	      </div>
+		  </div>
+	  </nav>
+    <!-- END nav -->
+
+    <section class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_2.jpg');" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
+          <div class="col-md-9 ftco-animate text-center">
+            <h1 class="mb-3 bread">Nuestro Equipo Terapeutas</h1>
+            <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Inicio</a></span> <span>Tratamientos</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+		
+		<section class="ftco-section">
+    	<div class="container">
+    		<div class="row justify-content-center mb-5">
+          <div class="col-md-12 heading-section text-center ftco-animate">
+          	<h3 class="subheading">Terapeutas</h3>
+            <h2 class="mb-1">Meet Our Spa Terapeutas</h2>
+          </div>
+        </div>
+    		<div class="row">
+    			<div class="col-lg-3 d-flex">
+    				<div class="coach align-items-stretch">
+	    				<div class="img" style="background-image: url(images/trainer-1.jpg);"></div>
+	    				<div class="text bg-white p-4 ftco-animate">
+	    					<span class="subheading">Owner / Head Coach</span>
+	    					<h3><a href="#">Elizabeth Nelson</a></h3>
+	    					<p>Encuentra un momento de paz en el centro de la ciudad. Lumina Spa es el lugar perfecto para relajar tu mente y revitalizar tu cuerpo.</p>
+	    					<ul class="ftco-social-media d-flex mt-4">
+	                <li class="ftco-animate"><a href="#" class="mr-2 d-flex justify-content-center align-items-center"><span class="icon-twitter"></span></a></li>
+	                <li class="ftco-animate"><a href="#" class="mr-2 d-flex justify-content-center align-items-center"><span class="icon-facebook"></span></a></li>
+	                <li class="ftco-animate"><a href="#" class="mr-2 d-flex justify-content-center align-items-center"><span class="icon-instagram"></span></a></li>
+	              </ul>
+	    					<p></p>
+	    				</div>
+	    			</div>
+    			</div>
+    			<div class="col-lg-3 d-flex">
+    				<div class="coach align-items-stretch">
+	    				<div class="img" style="background-image: url(images/trainer-2.jpg);"></div>
+	    				<div class="text bg-white p-4 ftco-animate">
+	    					<span class="subheading">Owner / Head Coach</span>
+	    					<h3><a href="#">Scarlett Torres</a></h3>
+	    					<p>Encuentra un momento de paz en el centro de la ciudad. Lumina Spa es el lugar perfecto para relajar tu mente y revitalizar tu cuerpo.</p>
+	    					<ul class="ftco-social-media d-flex mt-4">
+	                <li class="ftco-animate"><a href="#" class="mr-2 d-flex justify-content-center align-items-center"><span class="icon-twitter"></span></a></li>
+	                <li class="ftco-animate"><a href="#" class="mr-2 d-flex justify-content-center align-items-center"><span class="icon-facebook"></span></a></li>
+	                <li class="ftco-animate"><a href="#" class="mr-2 d-flex justify-content-center align-items-center"><span class="icon-instagram"></span></a></li>
+	              </ul>
+	    					<p></p>
+	    				</div>
+	    			</div>
+    			</div>
+    			<div class="col-lg-3 d-flex">
+    				<div class="coach align-items-stretch">
+	    				<div class="img" style="background-image: url(images/trainer-3.jpg);"></div>
+	    				<div class="text bg-white p-4 ftco-animate">
+	    					<span class="subheading">Owner / Head Coach</span>
+	    					<h3><a href="#">Victoria Wright</a></h3>
+	    					<p>Encuentra un momento de paz en el centro de la ciudad. Lumina Spa es el lugar perfecto para relajar tu mente y revitalizar tu cuerpo.</p>
+	    					<ul class="ftco-social-media d-flex mt-4">
+	                <li class="ftco-animate"><a href="#" class="mr-2 d-flex justify-content-center align-items-center"><span class="icon-twitter"></span></a></li>
+	                <li class="ftco-animate"><a href="#" class="mr-2 d-flex justify-content-center align-items-center"><span class="icon-facebook"></span></a></li>
+	                <li class="ftco-animate"><a href="#" class="mr-2 d-flex justify-content-center align-items-center"><span class="icon-instagram"></span></a></li>
+	              </ul>
+	    					<p></p>
+	    				</div>
+	    			</div>
+    			</div>
+    			<div class="col-lg-3 d-flex">
+    				<div class="coach align-items-stretch">
+	    				<div class="img" style="background-image: url(images/trainer-4.jpg);"></div>
+	    				<div class="text bg-white p-4 ftco-animate">
+	    					<span class="subheading">Owner / Head Coach</span>
+	    					<h3><a href="#">Stella Perry</a></h3>
+	    					<p>Encuentra un momento de paz en el centro de la ciudad. Lumina Spa es el lugar perfecto para relajar tu mente y revitalizar tu cuerpo.</p>
+	    					<ul class="ftco-social-media d-flex mt-4">
+	                <li class="ftco-animate"><a href="#" class="mr-2 d-flex justify-content-center align-items-center"><span class="icon-twitter"></span></a></li>
+	                <li class="ftco-animate"><a href="#" class="mr-2 d-flex justify-content-center align-items-center"><span class="icon-facebook"></span></a></li>
+	                <li class="ftco-animate"><a href="#" class="mr-2 d-flex justify-content-center align-items-center"><span class="icon-instagram"></span></a></li>
+	              </ul>
+	    					<p></p>
+	    				</div>
+	    			</div>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+
+    <footer class="ftco-footer ftco-section">
+      <div class="container">
+        <div class="row d-flex">
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Lumina Belleza</h2>
+              <p>Encuentra un momento de paz en el centro de la ciudad. Lumina Spa es el lugar perfecto para relajar tu mente y revitalizar tu cuerpo.</p>
+              <ul class="ftco-footer-social list-unstyled float-lft mt-3">
+                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4 ml-md-4">
+              <h2 class="ftco-heading-2">Popular Links</h2>
+              <ul class="list-unstyled">
+                <li><a href="#">Aromatheraphy</a></li>
+                <li><a href="#">Cuidado de la Piel</a></li>
+                <li><a href="#">Spa Herbal</a></li>
+                <li><a href="#">Masajes Corporales</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Quick Links</h2>
+              <ul class="list-unstyled">
+                <li><a href="#">Nosotros</a></li>
+                <li><a href="#">Our Spa</a></li>
+                <li><a href="#">Tratamientos</a></li>
+                <li><a href="#">Terapeutas</a></li>
+                <li><a href="#">Contacto</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Have a Questions?</h2>
+              <div class="block-23 mb-3">
+                <ul>
+                  <li><span class="icon icon-map-marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
+                  <li><a href="#"><span class="icon icon-phone"></span><span class="text">+593 992514730</span></a></li>
+                  <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@yourdomain.com</span></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center">
+
+            <p class="mb-0">
+              <!-- Link back to AIX Soft can't be removed. Template is licensed under CC BY 3.0. -->
+              <p class="mb-0" style="color: #000000 !important; font-weight: 700; font-size: 15px;">Copyright &copy; <span style="color: #000000 !important; font-weight: 700; display: inline-block; font-size: 15px;">Elaborado por AIX Soft &bull; Teléfono: +593 992514730</span></p>
+          </div>
+        </div>
+      </div>
+    
+
+
+</footer>
+    
+  
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/bootstrap-datepicker.js"></script>
+  <script src="js/jquery.timepicker.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="js/google-map.js"></script>
+  <script src="js/main.js"></script>
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Official Unwarpable HD Vector WhatsApp Floating Button -->
+<a href="https://wa.me/593992514730" target="_blank" rel="noopener noreferrer" id="whatsapp-official-btn" class="portal-whatsapp" style="position: fixed !important; bottom: 24px !important; right: 24px !important; width: 60px !important; height: 60px !important; min-width: 60px !important; min-height: 60px !important; max-width: 60px !important; max-height: 60px !important; background-color: #25D366 !important; color: #ffffff !important; border-radius: 50% !important; display: flex !important; align-items: center !important; justify-content: center !important; box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4), 0 2px 6px rgba(0, 0, 0, 0.2) !important; z-index: 999998 !important; transition: transform 0.25s ease, box-shadow 0.25s ease !important; text-decoration: none !important; padding: 0 !important; border: none !important; margin: 0 !important; box-sizing: border-box !important; transform: none !important; overflow: hidden !important;">
+  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 175.216 175.552" fill="#ffffff" style="width: 32px !important; height: 32px !important; min-width: 32px !important; min-height: 32px !important; max-width: 32px !important; max-height: 32px !important; flex: 0 0 32px !important; display: block !important; margin: auto !important; transform: none !important; stroke: none !important; outline: none !important;">
+  <path d="M 90.75 0 C 40.713 0 0.1 40.613 0.1 90.65 C 0.1 110.575 6.55 129.013 17.513 144.013 L 0 175.552 L 32.788 158.425 C 47.163 169.113 65.075 175.552 84.538 175.552 C 134.575 175.552 175.216 134.938 175.216 84.9 C 175.216 34.863 134.575 0 90.75 0 Z M 84.538 160.85 C 67.875 160.85 52.488 155.338 40.088 146.063 L 34.95 142.238 L 14.525 152.925 L 25.438 133.325 L 21.275 127.975 C 11.238 115.113 5.3 98.925 5.3 84.9 C 5.3 43.688 41.213 7.775 84.538 7.775 C 127.863 7.775 163.775 43.688 163.775 84.9 C 163.775 126.113 127.863 160.85 84.538 160.85 Z" fill="#ffffff"/>
+  <path d="M 128.538 106.638 C 126.313 105.513 115.425 100.15 113.388 99.413 C 111.35 98.675 109.863 98.313 108.375 100.538 C 106.888 102.763 102.625 107.788 101.325 109.275 C 100.025 110.763 98.725 110.95 96.5 109.838 C 94.275 108.725 87.113 106.375 78.625 98.8 C 72 92.9 67.525 85.613 66.225 83.388 C 64.925 81.163 66.088 79.963 67.2 78.85 C 68.2 77.85 69.425 76.25 70.538 74.95 C 71.65 73.65 72.025 72.725 72.763 71.238 C 73.5 69.75 73.125 68.45 72.563 67.338 C 72 66.225 67.538 55.263 65.675 50.788 C 63.863 46.425 62.013 47.013 60.675 46.938 C 59.413 46.863 57.925 46.863 56.438 46.863 C 54.95 46.863 52.538 47.425 50.488 49.65 C 48.438 51.875 42.688 57.263 42.688 68.213 C 42.688 79.163 50.663 89.738 51.775 91.225 C 52.888 92.713 67.5 115.025 89.925 124.688 C 95.263 126.988 99.4 128.35 102.638 129.388 C 107.988 131.088 112.863 130.85 116.713 130.275 C 121.013 129.638 129.938 124.875 131.8 119.675 C 133.663 114.475 133.663 110.013 133.1 109.088 C 132.538 108.163 131.05 107.6 128.538 106.638 Z" fill="#ffffff"/>
+</svg>
+</a>
+</body>
+</html>

@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="alternate icon" href="/favicon.ico" />
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+		<title>Nexus Tecnología Ecuador - HTML Ecommerce Template</title>
+
+		<!-- Google font -->
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
+
+		<!-- Bootstrap -->
+		<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>
+
+		<!-- Slick -->
+		<link type="text/css" rel="stylesheet" href="css/slick.css"/>
+		<link type="text/css" rel="stylesheet" href="css/slick-theme.css"/>
+
+		<!-- nouislider -->
+		<link type="text/css" rel="stylesheet" href="css/nouislider.min.css"/>
+
+		<!-- Font Awesome Icon -->
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+
+		<!-- Custom stlylesheet -->
+		<link type="text/css" rel="stylesheet" href="css/style.css"/>
+
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+    
+    <!-- Correcciones globales de Portal AIX -->
+    <link rel="stylesheet" href="../public/portal-aix.css">
+    <script defer src="../public/portal-aix.js"></script>
+  <script>
+function toggleTecnologiaMenu(e) {
+  if (e) {
+    if (e.preventDefault) e.preventDefault();
+    if (e.stopPropagation) e.stopPropagation();
+    if (e.stopImmediatePropagation) e.stopImmediatePropagation();
+  }
+  var nav = document.getElementById('responsive-nav');
+  if (nav) {
+    var isOpen = nav.classList.contains('menu-open') || nav.style.display === 'block';
+    if (isOpen) {
+      nav.classList.remove('menu-open', 'active');
+      nav.style.setProperty('display', 'none', 'important');
+    } else {
+      nav.classList.add('menu-open', 'active');
+      nav.style.setProperty('display', 'block', 'important');
+      nav.style.setProperty('visibility', 'visible', 'important');
+      nav.style.setProperty('opacity', '1', 'important');
+    }
+  }
+  return false;
+}
+</script>
+</head>
+	<body>
+
+<!-- Global Header Portal AIX -->
+<div id="global-portal-header" style="position: fixed; top: 0; left: 0; width: 100%; height: 64px; background: rgba(15, 15, 15, 0.9); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255, 255, 255, 0.08); z-index: 999999; display: flex; align-items: center; justify-content: space-between; padding: 0 24px; box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; transition: all 0.3s ease;">
+  <a href="/" style="color: #ffffff; text-decoration: none; font-weight: 800; font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; display: flex; align-items: center; gap: 8px;">
+    <span style="background: linear-gradient(135deg, #f2ca50, #008080); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">PORTAL AIX</span>
+  </a>
+  <div style="display: flex; gap: 8px; align-items: center; flex-wrap: nowrap; overflow-x: auto;">
+    <a href="/restaurante/index.html" id="nav-restaurante" style="color: #a0a0a0; text-decoration: none; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; padding: 8px 16px; transition: all 0.2s ease;">Restaurante</a>
+    <a href="/belleza/index.html" id="nav-belleza" style="color: #a0a0a0; text-decoration: none; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; padding: 8px 16px; transition: all 0.2s ease;">Belleza</a>
+    <a href="/ropa/index.html" id="nav-ropa" style="color: #a0a0a0; text-decoration: none; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; padding: 8px 16px; transition: all 0.2s ease;">Ropa</a>
+    <a href="/tecnologia/index.html" id="nav-tecnologia" style="color: #a0a0a0; text-decoration: none; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; padding: 8px 16px; transition: all 0.2s ease;">Tecnología</a>
+    <a href="/medico/index.html" id="nav-medico" style="color: #a0a0a0; text-decoration: none; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; padding: 8px 16px; transition: all 0.2s ease;">Médico</a>
+  </div>
+</div>
+<script>
+  (function() {
+    const path = window.location.pathname;
+    let activeId = '';
+    if (path.includes('/restaurante')) activeId = 'nav-restaurante';
+    else if (path.includes('/belleza')) activeId = 'nav-belleza';
+    else if (path.includes('/ropa')) activeId = 'nav-ropa';
+    else if (path.includes('/tecnologia')) activeId = 'nav-tecnologia';
+    else if (path.includes('/medico')) activeId = 'nav-medico';
+    if (activeId) {
+      const el = document.getElementById(activeId);
+      if (el) {
+        el.style.color = '#ffffff';
+        el.style.borderBottom = '2px solid #ffffff';
+        el.style.paddingBottom = '6px';
+      }
+    }
+  })();
+</script>
+<style>
+  body { padding-top: 64px !important; }
+  .header, .header_area, .header-section, .navigation, .main_header, .hamburger_bar, .ftco_navbar, #top-header { top: 64px !important; }
+  .menu { top: 64px !important; height: calc(100vh - 64px) !important; }
+</style>
+
+		<!-- HEADER -->
+		<header>
+			<!-- TOP HEADER -->
+			<div id="top-header">
+				<div class="container">
+					<ul class="header-links pull-left">
+						<li><a href="#"><i class="fa fa-phone"></i> +593 (02) 234-5678</a></li>
+						<li><a href="#"><i class="fa fa-envelope-o"></i> ventas@nexustech.ec</a></li>
+						<li><a href="#"><i class="fa fa-map-marker"></i> Av. Amazonas y Naciones Unidas, Quito, Ecuador</a></li>
+					</ul>
+					<ul class="header-links pull-right">
+						<li><a href="#"><i class="fa fa-dollar"></i> USD</a></li>
+						<li><a href="#"><i class="fa fa-user-o"></i> Mi Cuenta</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- /TOP HEADER -->
+
+			<!-- MAIN HEADER -->
+			<div id="header">
+				<!-- container -->
+				<div class="container">
+					<!-- row -->
+					<div class="row">
+						<!-- LOGO -->
+						<div class="col-md-3">
+							<div class="header-logo">
+								<a href="#" class="logo">
+									<img src="./img/logo.png" alt="">
+								</a>
+							</div>
+						</div>
+						<!-- /LOGO -->
+
+						<!-- SEARCH BAR -->
+						<div class="col-md-6">
+							<div class="header-search">
+								<form>
+									<select class="input-select">
+										<option value="0">Todas las Categorías</option>
+										<option value="1">Category 01</option>
+										<option value="1">Category 02</option>
+									</select>
+									<input class="input" placeholder="Buscar aquí...">
+									<button class="search-btn">Buscar</button>
+								</form>
+							</div>
+						</div>
+						<!-- /SEARCH BAR -->
+
+						<!-- ACCOUNT -->
+						<div class="col-md-3 clearfix">
+							<div class="header-ctn">
+								<!-- Wishlist -->
+								<div>
+									<a href="#">
+										<i class="fa fa-heart-o"></i>
+										<span>Lista de Deseos</span>
+										<div class="qty">2</div>
+									</a>
+								</div>
+								<!-- /Wishlist -->
+
+								<!-- Cart -->
+								<div class="dropdown">
+									<a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+										<i class="fa fa-shopping-cart"></i>
+										<span>Tu Carrito</span>
+										<div class="qty">3</div>
+									</a>
+									<div class="cart-dropdown">
+										<div class="cart-list">
+											<div class="product-widget">
+												<div class="product-img">
+													<img src="./img/product01.png" alt="">
+												</div>
+												<div class="product-body">
+													<h3 class="product-name"><a href="#">Dispositivo de Alta Tecnología</a></h3>
+													<h4 class="product-price"><span class="qty">1x</span>$980.00</h4>
+												</div>
+												<button class="delete"><i class="fa fa-close"></i></button>
+											</div>
+
+											<div class="product-widget">
+												<div class="product-img">
+													<img src="./img/product02.png" alt="">
+												</div>
+												<div class="product-body">
+													<h3 class="product-name"><a href="#">Dispositivo de Alta Tecnología</a></h3>
+													<h4 class="product-price"><span class="qty">3x</span>$980.00</h4>
+												</div>
+												<button class="delete"><i class="fa fa-close"></i></button>
+											</div>
+										</div>
+										<div class="cart-summary">
+											<small>3 Artículo(s) seleccionado(s)</small>
+											<h5>SUBTOTAL: $2940.00</h5>
+										</div>
+										<div class="cart-btns">
+											<a href="store.html">Ver Carrito </a>
+											<a href="#">Pagar / Facturar  <i class="fa fa-arrow-circle-right"></i></a>
+										</div>
+									</div>
+								</div>
+								<!-- /Cart -->
+
+								<!-- Menu Toogle -->
+								<div class="menu-toggle">
+									<a href="javascript:void(0);" onclick="toggleTecnologiaMenu(event); return false;" id="tecnologia-menu-btn" style="cursor: pointer;">
+										<i class="fa fa-bars"></i>
+										<span>Menú</span>
+									</a>
+								</div>
+								<!-- /Menu Toogle -->
+							</div>
+						</div>
+						<!-- /ACCOUNT -->
+					</div>
+					<!-- row -->
+				</div>
+				<!-- container -->
+			</div>
+			<!-- /MAIN HEADER -->
+		</header>
+		<!-- /HEADER -->
+
+		<!-- NAVIGATION -->
+<nav id="navigation">
+	<div class="container">
+		<div id="responsive-nav">
+			<ul class="main-nav nav navbar-nav">
+				<li class=""><a href="index.html">Inicio</a></li>
+				<li class=""><a href="store.html">Ofertas Especiales</a></li>
+				<li class=""><a href="store.html">Categorías</a></li>
+				<li class=""><a href="computadoras.html">Computadoras</a></li>
+				<li class="active"><a href="celulares.html">Celulares</a></li>
+				<li class=""><a href="camaras.html">Cámaras</a></li>
+				<li class=""><a href="accesorios.html">Accesorios</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+<!-- /NAVIGATION -->
+
+    <!-- SINGLE CATEGORY HEADER & GRID (NO REPETITION) -->
+    <div class="section" style="background: #FBFBFC; padding: 35px 0; border-bottom: 1px solid #E4E6EB; margin-bottom: 30px;">
+        <div class="container">
+            <h1 style="font-size: 28px; font-weight: 800; color: #2B2D42; margin: 0 0 8px;">Celulares & Smartphones Inteligentes</h1>
+            <p style="color: #6c757d; font-size: 15px; margin: 0;">Explora nuestra selección exclusiva de Celulares con tecnología de punta y garantía en Ecuador.</p>
+        </div>
+    </div>
+    
+    <div class="section" style="padding-top: 10px; padding-bottom: 60px;">
+        <div class="container">
+            <div class="row">
+                
+        <div class="col-md-6 col-xs-12" style="margin-bottom: 30px;">
+            <div class="product" style="border: 1px solid #E4E6EB; border-radius: 8px; overflow: hidden; background: #fff; padding: 24px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+                <div class="row align-items-center">
+                    <div class="col-sm-5">
+                        <div class="product-img-container" style="text-align: center; background: #FBFBFC; padding: 20px; border-radius: 8px; min-height: 210px; display: flex; align-items: center; justify-content: center; position: relative;">
+                            <img src="./img/product07.png" alt="iPhone 15 Pro Max 256GB Titanes Natural" style="max-height: 180px; object-fit: contain; width: 100%; display: block;">
+                            <span class="new" style="position: absolute; top: 12px; left: 12px; background: #D10024; color: #fff; padding: 3px 10px; font-size: 11px; font-weight: 700; border-radius: 4px; text-transform: uppercase;">NUEVO</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-7">
+                        <div class="product-body" style="padding-left: 10px;">
+                            <p class="product-category" style="color: #8D99AE; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 4px;">Celulares</p>
+                            <h3 class="product-name" style="font-size: 16px; margin: 0 0 8px; font-weight: 700; line-height: 1.3;"><a href="product.html" style="color: #2B2D42;">iPhone 15 Pro Max 256GB Titanes Natural</a></h3>
+                            <h4 class="product-price" style="color: #D10024; font-size: 20px; font-weight: 800; margin-bottom: 10px;">$1299.00 <del class="product-old-price" style="color: #8D99AE; font-size: 13px; font-weight: 400;">$1450.00</del></h4>
+                            <p style="font-size: 12px; color: #555; line-height: 1.5; margin-bottom: 12px;">Chasis de titanio de grado aeroespacial, chip A17 Pro, cámara principal de 48 MP y telefoto de 5x.</p>
+                            <a href="product.html" class="primary-btn" style="background: #D10024; color: #fff; padding: 8px 18px; border-radius: 4px; display: inline-block; font-weight: 700; font-size: 12px; text-decoration: none; text-transform: uppercase;">VER DETALLES</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-6 col-xs-12" style="margin-bottom: 30px;">
+            <div class="product" style="border: 1px solid #E4E6EB; border-radius: 8px; overflow: hidden; background: #fff; padding: 24px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+                <div class="row align-items-center">
+                    <div class="col-sm-5">
+                        <div class="product-img-container" style="text-align: center; background: #FBFBFC; padding: 20px; border-radius: 8px; min-height: 210px; display: flex; align-items: center; justify-content: center; position: relative;">
+                            <img src="./img/product08.png" alt="Samsung Galaxy S24 Ultra 512GB Titanium Gray" style="max-height: 180px; object-fit: contain; width: 100%; display: block;">
+                            <span class="new" style="position: absolute; top: 12px; left: 12px; background: #D10024; color: #fff; padding: 3px 10px; font-size: 11px; font-weight: 700; border-radius: 4px; text-transform: uppercase;">OFERTA</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-7">
+                        <div class="product-body" style="padding-left: 10px;">
+                            <p class="product-category" style="color: #8D99AE; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 4px;">Celulares</p>
+                            <h3 class="product-name" style="font-size: 16px; margin: 0 0 8px; font-weight: 700; line-height: 1.3;"><a href="product.html" style="color: #2B2D42;">Samsung Galaxy S24 Ultra 512GB Titanium Gray</a></h3>
+                            <h4 class="product-price" style="color: #D10024; font-size: 20px; font-weight: 800; margin-bottom: 10px;">$1199.00 <del class="product-old-price" style="color: #8D99AE; font-size: 13px; font-weight: 400;">$1399.00</del></h4>
+                            <p style="font-size: 12px; color: #555; line-height: 1.5; margin-bottom: 12px;">Revolución con Galaxy AI, S-Pen integrado, pantalla Dynamic AMOLED 2X de 2600 nits y cámara de 200 MP.</p>
+                            <a href="product.html" class="primary-btn" style="background: #D10024; color: #fff; padding: 8px 18px; border-radius: 4px; display: inline-block; font-weight: 700; font-size: 12px; text-decoration: none; text-transform: uppercase;">VER DETALLES</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-6 col-xs-12" style="margin-bottom: 30px;">
+            <div class="product" style="border: 1px solid #E4E6EB; border-radius: 8px; overflow: hidden; background: #fff; padding: 24px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+                <div class="row align-items-center">
+                    <div class="col-sm-5">
+                        <div class="product-img-container" style="text-align: center; background: #FBFBFC; padding: 20px; border-radius: 8px; min-height: 210px; display: flex; align-items: center; justify-content: center; position: relative;">
+                            <img src="./img/product06.png" alt="Xiaomi 14 Ultra 512GB Leica Camera" style="max-height: 180px; object-fit: contain; width: 100%; display: block;">
+                            <span class="new" style="position: absolute; top: 12px; left: 12px; background: #D10024; color: #fff; padding: 3px 10px; font-size: 11px; font-weight: 700; border-radius: 4px; text-transform: uppercase;">DESTACADO</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-7">
+                        <div class="product-body" style="padding-left: 10px;">
+                            <p class="product-category" style="color: #8D99AE; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 4px;">Celulares</p>
+                            <h3 class="product-name" style="font-size: 16px; margin: 0 0 8px; font-weight: 700; line-height: 1.3;"><a href="product.html" style="color: #2B2D42;">Xiaomi 14 Ultra 512GB Leica Camera</a></h3>
+                            <h4 class="product-price" style="color: #D10024; font-size: 20px; font-weight: 800; margin-bottom: 10px;">$1099.00 <del class="product-old-price" style="color: #8D99AE; font-size: 13px; font-weight: 400;">$1250.00</del></h4>
+                            <p style="font-size: 12px; color: #555; line-height: 1.5; margin-bottom: 12px;">Óptica profesional Leica Summilux de 1 pulgada, sensor de 50MP cuádruple y carga rápida HyperCharge de 90W.</p>
+                            <a href="product.html" class="primary-btn" style="background: #D10024; color: #fff; padding: 8px 18px; border-radius: 4px; display: inline-block; font-weight: 700; font-size: 12px; text-decoration: none; text-transform: uppercase;">VER DETALLES</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-6 col-xs-12" style="margin-bottom: 30px;">
+            <div class="product" style="border: 1px solid #E4E6EB; border-radius: 8px; overflow: hidden; background: #fff; padding: 24px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+                <div class="row align-items-center">
+                    <div class="col-sm-5">
+                        <div class="product-img-container" style="text-align: center; background: #FBFBFC; padding: 20px; border-radius: 8px; min-height: 210px; display: flex; align-items: center; justify-content: center; position: relative;">
+                            <img src="./img/product07.png" alt="Google Pixel 8 Pro 256GB Bay Blue" style="max-height: 180px; object-fit: contain; width: 100%; display: block;">
+                            <span class="new" style="position: absolute; top: 12px; left: 12px; background: #D10024; color: #fff; padding: 3px 10px; font-size: 11px; font-weight: 700; border-radius: 4px; text-transform: uppercase;">TOP VENTAS</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-7">
+                        <div class="product-body" style="padding-left: 10px;">
+                            <p class="product-category" style="color: #8D99AE; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 4px;">Celulares</p>
+                            <h3 class="product-name" style="font-size: 16px; margin: 0 0 8px; font-weight: 700; line-height: 1.3;"><a href="product.html" style="color: #2B2D42;">Google Pixel 8 Pro 256GB Bay Blue</a></h3>
+                            <h4 class="product-price" style="color: #D10024; font-size: 20px; font-weight: 800; margin-bottom: 10px;">$899.00 <del class="product-old-price" style="color: #8D99AE; font-size: 13px; font-weight: 400;">$999.00</del></h4>
+                            <p style="font-size: 12px; color: #555; line-height: 1.5; margin-bottom: 12px;">Inteligencia artificial avanzada Google Tensor G3, fotografía computacional líder y 7 años de soporte Android.</p>
+                            <a href="product.html" class="primary-btn" style="background: #D10024; color: #fff; padding: 8px 18px; border-radius: 4px; display: inline-block; font-weight: 700; font-size: 12px; text-decoration: none; text-transform: uppercase;">VER DETALLES</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+            </div>
+        </div>
+    </div>
+    
+<!-- FOOTER -->
+		<footer id="footer">
+			<!-- top footer -->
+			<div class="section">
+				<!-- container -->
+				<div class="container">
+					<!-- row -->
+					<div class="row">
+						<div class="col-md-3 col-xs-6">
+							<div class="footer">
+								<h3 class="footer-title">Nosotros</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.</p>
+								<ul class="footer-links">
+									<li><a href="#"><i class="fa fa-map-marker"></i>Av. Amazonas y Naciones Unidas, Quito, Ecuador</a></li>
+									<li><a href="#"><i class="fa fa-phone"></i>+593 (02) 234-5678</a></li>
+									<li><a href="#"><i class="fa fa-envelope-o"></i>ventas@nexustech.ec</a></li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="col-md-3 col-xs-6">
+							<div class="footer">
+								<h3 class="footer-title">Categorías</h3>
+								<ul class="footer-links">
+									<li><a href="#">Hot deals</a></li>
+									<li><a href="store.html">Computadoras</a></li>
+									<li><a href="store.html">Celulares</a></li>
+									<li><a href="store.html">Cámaras</a></li>
+									<li><a href="store.html">Accesorios</a></li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="clearfix visible-xs"></div>
+
+						<div class="col-md-3 col-xs-6">
+							<div class="footer">
+								<h3 class="footer-title">Information</h3>
+								<ul class="footer-links">
+									<li><a href="#">Nosotros</a></li>
+									<li><a href="#">Contacto Us</a></li>
+									<li><a href="#">Privacy Policy</a></li>
+									<li><a href="#">Orders and Returns</a></li>
+									<li><a href="#">Terms & Conditions</a></li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="col-md-3 col-xs-6">
+							<div class="footer">
+								<h3 class="footer-title">Service</h3>
+								<ul class="footer-links">
+									<li><a href="#">Mi Cuenta</a></li>
+									<li><a href="store.html">Ver Carrito </a></li>
+									<li><a href="#">Wishlist</a></li>
+									<li><a href="#">Track My Order</a></li>
+									<li><a href="#">Help</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- /row -->
+				</div>
+				<!-- /container -->
+			</div>
+			<!-- /top footer -->
+
+			<!-- bottom footer -->
+			<div id="bottom-footer" class="section">
+				<div class="container">
+					<!-- row -->
+					<div class="row">
+						<div class="col-md-12 text-center">
+							<ul class="footer-payments">
+								<li><a href="#"><i class="fa fa-cc-visa"></i></a></li>
+								<li><a href="#"><i class="fa fa-credit-card"></i></a></li>
+								<li><a href="#"><i class="fa fa-cc-paypal"></i></a></li>
+								<li><a href="#"><i class="fa fa-cc-mastercard"></i></a></li>
+								<li><a href="#"><i class="fa fa-cc-discover"></i></a></li>
+								<li><a href="#"><i class="fa fa-cc-amex"></i></a></li>
+							</ul>
+							<span class="copyright">
+								<!-- Link back to AIX Soft can't be removed. Template is licensed under CC BY 3.0. -->
+								Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | <span style="color: #ffffff !important; font-weight: 600; display: inline-block;">Elaborado por AIX Soft &bull; Teléfono: +593 992514730</span></span>
+						</div>
+					</div>
+						<!-- /row -->
+				</div>
+				<!-- /container -->
+			</div>
+			<!-- /bottom footer -->
+		
+
+
+</footer>
+		<!-- /FOOTER -->
+
+		<!-- jQuery Plugins -->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/slick.min.js"></script>
+		<script src="js/nouislider.min.js"></script>
+		<script src="js/jquery.zoom.min.js"></script>
+		<script src="js/main.js"></script>
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Official Unwarpable HD Vector WhatsApp Floating Button -->
+<a href="https://wa.me/593992514730" target="_blank" rel="noopener noreferrer" id="whatsapp-official-btn" class="portal-whatsapp" style="position: fixed !important; bottom: 24px !important; right: 24px !important; width: 60px !important; height: 60px !important; min-width: 60px !important; min-height: 60px !important; max-width: 60px !important; max-height: 60px !important; background-color: #25D366 !important; color: #ffffff !important; border-radius: 50% !important; display: flex !important; align-items: center !important; justify-content: center !important; box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4), 0 2px 6px rgba(0, 0, 0, 0.2) !important; z-index: 999998 !important; transition: transform 0.25s ease, box-shadow 0.25s ease !important; text-decoration: none !important; padding: 0 !important; border: none !important; margin: 0 !important; box-sizing: border-box !important; transform: none !important; overflow: hidden !important;">
+  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 175.216 175.552" fill="#ffffff" style="width: 32px !important; height: 32px !important; min-width: 32px !important; min-height: 32px !important; max-width: 32px !important; max-height: 32px !important; flex: 0 0 32px !important; display: block !important; margin: auto !important; transform: none !important; stroke: none !important; outline: none !important;">
+  <path d="M 90.75 0 C 40.713 0 0.1 40.613 0.1 90.65 C 0.1 110.575 6.55 129.013 17.513 144.013 L 0 175.552 L 32.788 158.425 C 47.163 169.113 65.075 175.552 84.538 175.552 C 134.575 175.552 175.216 134.938 175.216 84.9 C 175.216 34.863 134.575 0 90.75 0 Z M 84.538 160.85 C 67.875 160.85 52.488 155.338 40.088 146.063 L 34.95 142.238 L 14.525 152.925 L 25.438 133.325 L 21.275 127.975 C 11.238 115.113 5.3 98.925 5.3 84.9 C 5.3 43.688 41.213 7.775 84.538 7.775 C 127.863 7.775 163.775 43.688 163.775 84.9 C 163.775 126.113 127.863 160.85 84.538 160.85 Z" fill="#ffffff"/>
+  <path d="M 128.538 106.638 C 126.313 105.513 115.425 100.15 113.388 99.413 C 111.35 98.675 109.863 98.313 108.375 100.538 C 106.888 102.763 102.625 107.788 101.325 109.275 C 100.025 110.763 98.725 110.95 96.5 109.838 C 94.275 108.725 87.113 106.375 78.625 98.8 C 72 92.9 67.525 85.613 66.225 83.388 C 64.925 81.163 66.088 79.963 67.2 78.85 C 68.2 77.85 69.425 76.25 70.538 74.95 C 71.65 73.65 72.025 72.725 72.763 71.238 C 73.5 69.75 73.125 68.45 72.563 67.338 C 72 66.225 67.538 55.263 65.675 50.788 C 63.863 46.425 62.013 47.013 60.675 46.938 C 59.413 46.863 57.925 46.863 56.438 46.863 C 54.95 46.863 52.538 47.425 50.488 49.65 C 48.438 51.875 42.688 57.263 42.688 68.213 C 42.688 79.163 50.663 89.738 51.775 91.225 C 52.888 92.713 67.5 115.025 89.925 124.688 C 95.263 126.988 99.4 128.35 102.638 129.388 C 107.988 131.088 112.863 130.85 116.713 130.275 C 121.013 129.638 129.938 124.875 131.8 119.675 C 133.663 114.475 133.663 110.013 133.1 109.088 C 132.538 108.163 131.05 107.6 128.538 106.638 Z" fill="#ffffff"/>
+</svg>
+</a>
+</body>
+</html>

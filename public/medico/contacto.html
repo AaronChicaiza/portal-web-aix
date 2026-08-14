@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="alternate icon" href="/favicon.ico" />
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contacto y Ubicación - Hospital de Alta Complejidad</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-highest": "#d8e3fa",
+                        "surface": "#f9f9ff",
+                        "on-primary-fixed": "#001b3d",
+                        "on-secondary-container": "#006f67",
+                        "surface-dim": "#cfdaf1",
+                        "on-primary-fixed-variant": "#00468c",
+                        "on-surface-variant": "#424752",
+                        "on-tertiary-fixed-variant": "#43474b",
+                        "on-secondary-fixed": "#00201d",
+                        "on-tertiary-fixed": "#171c1f",
+                        "inverse-on-surface": "#ebf1ff",
+                        "on-primary-container": "#c8daff",
+                        "secondary-fixed-dim": "#5ddacd",
+                        "surface-container-low": "#f0f3ff",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-variant": "#d8e3fa",
+                        "on-tertiary": "#ffffff",
+                        "background": "#f9f9ff",
+                        "on-background": "#111c2c",
+                        "secondary-container": "#79f3e7",
+                        "outline-variant": "#c2c6d4",
+                        "inverse-primary": "#a9c7ff",
+                        "tertiary-fixed-dim": "#c3c7cb",
+                        "primary": "#00478d",
+                        "outline": "#727783",
+                        "on-surface": "#111c2c",
+                        "primary-container": "#005eb8",
+                        "on-error": "#ffffff",
+                        "secondary": "#006a63",
+                        "tertiary-container": "#5b6063",
+                        "on-primary": "#ffffff",
+                        "surface-tint": "#005db6",
+                        "primary-fixed": "#d6e3ff",
+                        "surface-container": "#e7eeff",
+                        "on-error-container": "#93000a",
+                        "on-secondary": "#ffffff",
+                        "surface-container-high": "#dee8ff",
+                        "tertiary-fixed": "#dfe3e7",
+                        "on-tertiary-container": "#d6dade",
+                        "secondary-fixed": "#7cf6ea",
+                        "surface-bright": "#f9f9ff",
+                        "on-secondary-fixed-variant": "#00504a",
+                        "error-container": "#ffdad6",
+                        "tertiary": "#43484c",
+                        "primary-fixed-dim": "#a9c7ff",
+                        "error": "#ba1a1a",
+                        "inverse-surface": "#263142"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "base": "8px",
+                        "sm": "12px",
+                        "margin-desktop": "64px",
+                        "margin-mobile": "16px",
+                        "xl": "80px",
+                        "xs": "4px",
+                        "lg": "48px",
+                        "gutter": "24px",
+                        "md": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-xl": ["Manrope"],
+                        "headline-md": ["Manrope"],
+                        "headline-lg": ["Manrope"],
+                        "label-sm": ["Inter"],
+                        "headline-xl-mobile": ["Manrope"],
+                        "body-lg": ["Inter"],
+                        "label-md": ["Inter"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "600" }],
+                        "headline-xl-mobile": ["30px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md text-body-md antialiased min-h-screen flex flex-col">
+
+<!-- Global Header Portal AIX -->
+<div id="global-portal-header" style="position: fixed; top: 0; left: 0; width: 100%; height: 64px; background: rgba(15, 15, 15, 0.9); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255, 255, 255, 0.08); z-index: 999999; display: flex; align-items: center; justify-content: space-between; padding: 0 24px; box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; transition: all 0.3s ease;">
+  <a href="/" style="color: #ffffff; text-decoration: none; font-weight: 800; font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; display: flex; align-items: center; gap: 8px;">
+    <span style="background: linear-gradient(135deg, #f2ca50, #008080); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">PORTAL AIX</span>
+  </a>
+  <div style="display: flex; gap: 8px; align-items: center; flex-wrap: nowrap; overflow-x: auto;">
+    <a href="/restaurante/index.html" id="nav-restaurante" style="color: #a0a0a0; text-decoration: none; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; padding: 8px 16px; transition: all 0.2s ease;">Restaurante</a>
+    <a href="/belleza/index.html" id="nav-belleza" style="color: #a0a0a0; text-decoration: none; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; padding: 8px 16px; transition: all 0.2s ease;">Belleza</a>
+    <a href="/ropa/index.html" id="nav-ropa" style="color: #a0a0a0; text-decoration: none; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; padding: 8px 16px; transition: all 0.2s ease;">Ropa</a>
+    <a href="/tecnologia/index.html" id="nav-tecnologia" style="color: #a0a0a0; text-decoration: none; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; padding: 8px 16px; transition: all 0.2s ease;">Tecnología</a>
+    <a href="/medico/index.html" id="nav-medico" style="color: #a0a0a0; text-decoration: none; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; padding: 8px 16px; transition: all 0.2s ease;">Médico</a>
+  </div>
+</div>
+<script>
+  (function() {
+    const path = window.location.pathname;
+    let activeId = '';
+    if (path.includes('/restaurante')) activeId = 'nav-restaurante';
+    else if (path.includes('/belleza')) activeId = 'nav-belleza';
+    else if (path.includes('/ropa')) activeId = 'nav-ropa';
+    else if (path.includes('/tecnologia')) activeId = 'nav-tecnologia';
+    else if (path.includes('/medico')) activeId = 'nav-medico';
+    if (activeId) {
+      const el = document.getElementById(activeId);
+      if (el) {
+        el.style.color = '#ffffff';
+        el.style.borderBottom = '2px solid #ffffff';
+        el.style.paddingBottom = '6px';
+      }
+    }
+  })();
+</script>
+<style>
+  body { padding-top: 64px !important; }
+  .header, .header_area, .header-section, .navigation, .main_header { top: 64px !important; }
+</style>
+
+<!-- TopNavBar -->
+<header class="w-full top-0 sticky bg-surface-container-lowest dark:bg-inverse-surface shadow-sm z-50">
+<div class="flex justify-between items-center h-20 px-margin-desktop max-w-7xl mx-auto">
+<div class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed-dim">
+                Clínica Hospitalaria Santé
+            </div>
+<nav class="hidden md:flex gap-8">
+<a class="text-on-surface-variant hover:text-primary transition-colors hover:bg-surface-container-low dark:hover:bg-surface-container transition-all duration-200 px-3 py-2 rounded-lg font-body-md text-body-md" href="#">Inicio</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors hover:bg-surface-container-low dark:hover:bg-surface-container transition-all duration-200 px-3 py-2 rounded-lg font-body-md text-body-md" href="#">Servicios</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors hover:bg-surface-container-low dark:hover:bg-surface-container transition-all duration-200 px-3 py-2 rounded-lg font-body-md text-body-md" href="#">Equipo</a>
+<a class="text-primary font-bold border-b-2 border-primary pb-1 px-3 py-2 font-body-md text-body-md" href="#">Contacto</a>
+</nav>
+<button class="bg-primary text-on-primary px-6 py-3 rounded-lg font-label-md text-label-md hover:bg-primary-container active:scale-95 transition-transform hidden md:block">
+                Reserva de Cita
+            </button>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined" style="font-size: 28px;">menu</span>
+</button>
+</div>
+</header>
+<main class="flex-grow flex flex-col">
+<!-- Hero Section -->
+<section class="relative bg-surface-container-low py-20 px-margin-desktop">
+<div class="max-w-7xl mx-auto text-center">
+<h1 class="font-headline-xl text-headline-xl text-on-background mb-4">Estamos aquí para ayudarte</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Nuestra misión es tu bienestar. Contáctanos para resolver tus dudas, programar citas o en caso de emergencias médicas.</p>
+</div>
+</section>
+<!-- Bento Grid Contacto & Info -->
+<section class="py-16 px-margin-desktop bg-background">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Main Contacto Info (Bento Item 1) -->
+<div class="md:col-span-8 bg-surface-container-lowest rounded-xl p-8 shadow-sm border border-outline-variant/30 flex flex-col justify-between">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-background mb-6">Información de Contacto</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+<!-- Emergencias -->
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 rounded-full bg-error-container text-error flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">emergency</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-background mb-1">Emergencias 24/7</h3>
+<p class="font-body-lg text-body-lg text-error font-semibold">900 123 456</p>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Atención inmediata ininterrumpida.</p>
+</div>
+</div>
+<!-- Central -->
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 rounded-full bg-primary-fixed text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined">call</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-background mb-1">Central Telefónica</h3>
+<p class="font-body-lg text-body-lg text-on-background font-semibold">+34 91 123 45 67</p>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Lunes a Viernes, 8:00 - 20:00</p>
+</div>
+</div>
+<!-- Email -->
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-background mb-1">Correo Electrónico</h3>
+<p class="font-body-md text-body-md text-on-background">info@hospitalaltacomplejidad.com</p>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Consultas generales y admisiones.</p>
+</div>
+</div>
+<!-- Dirección -->
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-background mb-1">Dirección</h3>
+<p class="font-body-md text-body-md text-on-background">Av. de la Salud 123, 28000<br/>Madrid, España</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Horarios (Bento Item 2) -->
+<div class="md:col-span-4 bg-primary text-on-primary rounded-xl p-8 shadow-sm flex flex-col justify-between">
+<div>
+<h2 class="font-headline-lg text-headline-lg mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined">schedule</span>
+                            Horarios
+                        </h2>
+<div class="space-y-6">
+<div>
+<h3 class="font-label-md text-label-md text-primary-fixed-dim uppercase tracking-wider mb-2">Consultorios Externos</h3>
+<p class="font-body-md text-body-md">Lunes a Viernes: 08:00 - 20:00</p>
+<p class="font-body-md text-body-md">Sábados: 09:00 - 13:00</p>
+</div>
+<hr class="border-primary-fixed/30"/>
+<div>
+<h3 class="font-label-md text-label-md text-primary-fixed-dim uppercase tracking-wider mb-2">Horario de Visitas</h3>
+<p class="font-body-md text-body-md">UCI: 12:00 - 13:00 / 18:00 - 19:00</p>
+<p class="font-body-md text-body-md">Hospitalización General: 10:00 - 20:00</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Formulario (Bento Item 3) -->
+<div class="md:col-span-5 bg-surface-container-lowest rounded-xl p-8 shadow-sm border border-outline-variant/30">
+<h2 class="font-headline-lg text-headline-lg text-on-background mb-6">Envíanos un Mensaje</h2>
+<form class="space-y-4">
+<div>
+<label class="block font-label-md text-label-md text-on-background mb-1" for="name">Nombre Completo</label>
+<input class="w-full bg-surface-container-low border-none rounded-lg p-3 font-body-md text-body-md focus:ring-2 focus:ring-primary/50 transition-shadow" id="name" placeholder="Ej. Juan Pérez" type="text"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-background mb-1" for="email">Correo Electrónico</label>
+<input class="w-full bg-surface-container-low border-none rounded-lg p-3 font-body-md text-body-md focus:ring-2 focus:ring-primary/50 transition-shadow" id="email" placeholder="juan@ejemplo.com" type="email"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-background mb-1" for="subject">Asunto</label>
+<select class="w-full bg-surface-container-low border-none rounded-lg p-3 font-body-md text-body-md focus:ring-2 focus:ring-primary/50 transition-shadow" id="subject">
+<option>Consulta General</option>
+<option>Sugerencias / Reclamos</option>
+<option>Información de Seguros</option>
+<option>Otros</option>
+</select>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-background mb-1" for="message">Mensaje</label>
+<textarea class="w-full bg-surface-container-low border-none rounded-lg p-3 font-body-md text-body-md focus:ring-2 focus:ring-primary/50 transition-shadow resize-none" id="message" placeholder="Escribe tu mensaje aquí..." rows="4"></textarea>
+</div>
+<button class="w-full bg-primary text-on-primary py-3 rounded-lg font-label-md text-label-md hover:bg-primary-container transition-colors mt-2" type="button">
+                            Enviar Mensaje
+                        </button>
+</form>
+</div>
+<!-- Mapa interactivo (Bento Item 4) -->
+<div class="md:col-span-7 bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm border border-outline-variant/30 relative min-h-[400px]">
+<!-- Placeholder para el mapa -->
+<img class="absolute inset-0 w-full h-full object-cover" data-alt="A modern, high-contrast digital map view of Madrid city center, highlighting a medical facility. The style is clean, vector-based, using a minimalist color palette predominantly in shades of light blue, white, and soft gray. The map should look highly professional, clinical, and precise, suitable for a premium medical application interface." data-location="Madrid" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGraImPbLAVc8ieHwOqRpezxcyp_5RCWBkV0lWHsdgrMlMFxFiBxRSxrHXScPu8EkYX1fionr67BZ7k_6hkH39AZ4I5YAYCqjjyEiQS74zKfM6sWhhR7ZDY189GY3u0hVXMZj_mfo_C7dkPePuEgzq_u_tbsgjlALYTamL1zyUaF4tJdS0rHWdzSb4oQ_tmTpgHTHqlsP4KTZXvyqLA-Dplhp9HOa-Dvr-2NiT0e_1kn3Fh-JRzqQi"/>
+<div class="absolute bottom-6 left-6 right-6 glass-card p-4 rounded-xl">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">location_on</span>
+<div>
+<h4 class="font-label-md text-label-md text-on-background font-semibold">Hospital de Alta Complejidad</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Av. de la Salud 123, 28000 Madrid, España</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="py-16 px-margin-desktop bg-surface-container-lowest border-t border-outline-variant/20">
+<div class="max-w-4xl mx-auto">
+<h2 class="font-headline-lg text-headline-lg text-center text-on-background mb-10">Preguntas Frecuentes</h2>
+<div class="space-y-4">
+<!-- FAQ 1 -->
+<div class="border border-outline-variant/30 rounded-lg p-6 bg-surface">
+<h3 class="font-headline-md text-headline-md text-on-background mb-2">¿Qué seguros médicos aceptan?</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Trabajamos con las principales aseguradoras nacionales e internacionales. Para confirmar la cobertura específica de su póliza, le recomendamos contactar con nuestra central telefónica o enviar un correo con los datos de su seguro.</p>
+</div>
+<!-- FAQ 2 -->
+<div class="border border-outline-variant/30 rounded-lg p-6 bg-surface">
+<h3 class="font-headline-md text-headline-md text-on-background mb-2">¿Cómo puedo obtener una copia de mi historial clínico?</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Puede solicitar su historial clínico a través de nuestro Portal del Paciente online, o presencialmente en el departamento de Admisiones presentando su DNI original.</p>
+</div>
+<!-- FAQ 3 -->
+<div class="border border-outline-variant/30 rounded-lg p-6 bg-surface">
+<h3 class="font-headline-md text-headline-md text-on-background mb-2">¿Disponen de parking para pacientes y visitas?</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Sí, contamos con un parking subterráneo de 3 niveles disponible las 24 horas. Los pacientes de urgencias disponen de tarifas reducidas presentando el justificante en caja.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full bg-surface-container-highest dark:bg-on-surface-variant">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-xl max-w-7xl mx-auto">
+<div class="col-span-1 md:col-span-1">
+<div class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed-dim mb-4">
+                    Clínica Hospitalaria Santé
+                </div>
+<p class="font-body-md text-body-md text-on-surface dark:text-surface">
+                    © 2024 Hospital de Alta Complejidad. Todos los derechos reservados.
+                </p>
+</div>
+<div class="col-span-1 md:col-span-3 flex flex-wrap gap-6 md:justify-end items-center">
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed underline transition-all cursor-pointer" href="#">Aviso Legal</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed underline transition-all cursor-pointer" href="#">Privacidad</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed underline transition-all cursor-pointer" href="#">Servicios</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed underline transition-all cursor-pointer" href="#">Emergencias 24/7</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed underline transition-all cursor-pointer" href="#">Portal del Paciente</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed underline transition-all cursor-pointer" href="#">RR.HH.</a>
+</div>
+</div>
+</footer>
+
+
+<!-- WhatsApp Official Static Button -->
+<a href="https://wa.me/593991234567" target="_blank" style="position: fixed; bottom: 24px; right: 24px; width: 56px; height: 56px; background-color: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; shadow: 0 4px 12px rgba(0,0,0,0.3); z-index: 999998; transition: transform 0.2s ease; cursor: pointer; text-decoration: none;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
+  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="#ffffff">
+    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.262 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.457L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.966C16.634 1.974 14.164.95 11.533.95 6.095.95 1.672 5.32 1.668 10.749c-.001 1.693.455 3.348 1.32 4.793l-.99 3.61 3.738-.971.05.029zm11.758-6.844c-.28-.14-1.654-.816-1.91-.908-.255-.093-.44-.139-.626.14-.185.279-.715.908-.876 1.093-.16.186-.322.21-.602.07-2.585-1.293-4.22-2.317-5.834-5.093-.28-.48-.08-.738.12-.936.18-.179.4-.467.6-.7.2-.234.267-.393.4-.656.133-.262.067-.492-.033-.679-.1-.186-.626-1.507-.856-2.061-.225-.54-.452-.467-.626-.476-.16-.008-.346-.01-.533-.01-.187 0-.493.07-.751.35-.258.28-.985.962-.985 2.343 0 1.38.1 2.719.14 2.906.04.186 2.012 3.073 4.876 4.31.68.295 1.21.47 1.62.601.68.216 1.3.186 1.79.112.55-.082 1.654-.675 1.884-1.327.23-.653.23-1.214.16-1.327-.07-.113-.255-.186-.534-.327z" />
+  </svg>
+</a>
+</body></html>
