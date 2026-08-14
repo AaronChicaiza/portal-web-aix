@@ -364,3 +364,23 @@ body {
     opacity: 1 !important;
   }
 }
+
+
+/* Exclusivo Belleza Subpáginas - Transparente sobre banner */
+.ftco_navbar.ftco-navbar-light-2 {
+  background: rgba(0, 0, 0, 0.45) !important;
+}
+.ftco_navbar.ftco-navbar-light-2 .navbar-nav > .nav-item > .nav-link {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+}
+.ftco_navbar.ftco-navbar-light-2 .navbar-brand {
+  color: #d9bf77 !important;
+  font-weight: 800 !important;
+}
+.hero-wrap.hero-wrap-2 {
+  margin-top: 0 !important;
+  background-position: center center !important;
+  background-size: cover !important;
+}
