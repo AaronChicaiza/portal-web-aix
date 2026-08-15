@@ -19,6 +19,38 @@ const injectPortalRuntime = (html: string) => {
     : withRunnableRuntime.replace(/<\/head>/i, `${portalRuntime}\n  </head>`);
 };
 
+// Discover all HTML input files dynamically so Vite builds every subpage for production
+const getHtmlInputs = () => {
+  const inputs: Record<string, string> = {
+    main: path.resolve(__dirname, "index.html")
+  };
+  
+  const scanDir = (dir: string) => {
+    const entries = fs.readdirSync(dir, { withFileTypes: true });
+    for (const entry of entries) {
+      if (
+        entry.name === "node_modules" || 
+        entry.name === "dist" || 
+        entry.name === "public" || 
+        entry.name === "fonts" || 
+        entry.name.startsWith(".")
+      ) continue;
+
+      const fullPath = path.join(dir, entry.name);
+      if (entry.isDirectory()) {
+        scanDir(fullPath);
+      } else if (entry.isFile() && entry.name.endsWith(".html")) {
+        const relativePath = path.relative(__dirname, fullPath);
+        const name = relativePath.replace(/\\/g, "/").replace(/\.html$/, "").replace(/\//g, "_");
+        inputs[name] = fullPath;
+      }
+    }
+  };
+
+  scanDir(__dirname);
+  return inputs;
+};
+
 // Custom dev server middleware to serve static sub-site HTML pages directly
 // This bypasses Vite's SPA fallback routing which causes 404 errors on subdirectory HTML files
 const multipageDevServerPlugin = () => ({
@@ -27,8 +59,8 @@ const multipageDevServerPlugin = () => ({
     order: "pre" as const,
     handler: injectPortalRuntime,
   },
-  configureServer(server) {
-    server.middlewares.use((req, res, next) => {
+  configureServer(server: any) {
+    server.middlewares.use((req: any, res: any, next: any) => {
       const url = req.url ? req.url.split("?")[0] : "";
       let targetUrl = url;
       
@@ -58,7 +90,19 @@ const multipageDevServerPlugin = () => ({
   },
   closeBundle() {
     const outputDirectory = path.join(__dirname, "dist");
+    const sectors = ["restaurante", "belleza", "ropa", "tecnologia", "medico"];
+    
+    // Copy all sector subfolders recursively into dist/ so Render has every single HTML page and asset
+    sectors.forEach((sector) => {
+      const srcDir = path.join(__dirname, sector);
+      const destDir = path.join(outputDirectory, sector);
+      if (fs.existsSync(srcDir)) {
+        fs.cpSync(srcDir, destDir, { recursive: true, force: true });
+      }
+    });
+
     const injectIntoOutput = (directory: string) => {
+      if (!fs.existsSync(directory)) return;
       fs.readdirSync(directory, { withFileTypes: true }).forEach((entry) => {
         const entryPath = path.join(directory, entry.name);
         if (entry.isDirectory()) injectIntoOutput(entryPath);
